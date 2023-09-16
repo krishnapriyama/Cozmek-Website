@@ -17,7 +17,7 @@ const HeroSection = () => {
             we empower individuals of all generations, unlocking their full
             potential in an ever-evolving world.
             <span className="py-2 text-[#6B7385] block text-outfit  font-bold tracking-wide capitalize">
-              Join us now to secure a future filled with success!
+              Join us now to secure a future filled with success!
             </span>
           </p>
           <button className="bg-[#0B7077D9] p-4 px-8 rounded-md text-white">View Our Programs</button>
