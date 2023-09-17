@@ -4,7 +4,7 @@ import NavBar from "../components/navBar";
 
 const Home = () => {
   return (
-    <div>
+    <div className="box-border">
       <AddressBar />
       <NavBar />
       <HeroSection />
