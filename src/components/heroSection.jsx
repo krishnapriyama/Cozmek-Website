@@ -6,7 +6,7 @@ import YourComponent from "../components/swiper"
 const HeroSection = () => {
   return (
     <div className="h-screen md:flex custom-gradient font-medium text-[#192335CC] flex-row">
-      <div className="md:w-1/2 sm:p-10 px-4 ">
+      <div className="md:w-1/2 sm:p-10 px-10 ">
         <h1 className="p-3 bg-white inline-block mt-9">
           🏆 AI: Shaping the Future of Our World
         </h1>
