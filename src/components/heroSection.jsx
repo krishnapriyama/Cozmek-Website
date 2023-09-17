@@ -1,22 +1,9 @@
-import Slide from "../components/slide"
 
-let card =[
-  {
-mainImage:'/src/assets/BasicCardimg.png',
-rountImages:[''],
-Project:'',
-type:'',
-MainHead:'',
-Discription:'',
-DiscountAmount:'',
-OriginalAmount:''
-  }
-]
+import YourComponent from "../components/swiper"
+
+
 
 const HeroSection = () => {
-
-
-  
   return (
     <div className="h-screen md:flex custom-gradient font-medium text-[#192335CC] flex-row">
       <div className="md:w-1/2 sm:p-10 px-4 ">
@@ -41,8 +28,9 @@ const HeroSection = () => {
           View Our Programs
         </button>
       </div>
-      <div className="md:w-1/2 sm:p-10 px-4 flex py-4 justify-center ">
-         <Slide/>
+      <div className="w-full md:w-1/2 sm:p-10 px-4 flex py-4 justify-center ">
+        
+        <YourComponent />
       </div>
     </div>
   );

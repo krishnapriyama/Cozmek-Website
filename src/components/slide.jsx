@@ -1,8 +1,9 @@
-const slide = () => {
+const slide = ({card}) => {
+  console.log(card)
   return (
-    <div className="w-[316px] h-[508px] bg-white rounded-lg  border-2 overflow-hidden container relative">
+    <div className=" w-[316px] h-[508px] container  bg-white rounded-lg  border-2  relative">
       <div>
-        <img src="/src/assets/BasicCardimg.png" alt="CardImage" />
+        <img src={card?.mainImage} alt="CardImage" />
       </div>
       <div
         className="flex items-center gap-5 absolute top-[9rem] left-8"
@@ -92,3 +93,6 @@ const slide = () => {
 };
 
 export default slide;
+
+
+

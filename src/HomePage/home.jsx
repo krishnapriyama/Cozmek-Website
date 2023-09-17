@@ -5,10 +5,10 @@ import Footer from "../components/footer";
 
 const Home = () => {
   return (
-    <div className="box-border">
+    <div className="">
       <AddressBar />
       <NavBar />
-      {/* <HeroSection /> */}
+      <HeroSection />
       <Footer/>
     </div>
   );
