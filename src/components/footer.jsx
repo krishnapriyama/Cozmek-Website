@@ -38,10 +38,10 @@ const footer = () => {
       {/* Top Footer */}
       <div className="mx-auto w-[85%] mt-10">
         <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2">
-          <div className="w-[90%]">
+          <div className="md:w-[80%] w-full">
             <Typography variant="h5" className="font-bold flex flex-col">
               We are Cozmek Private Limited
-              <span className="flex flex-col text-[#737373] font-normal mt-5">
+              <span className="flex flex-col text-sm text-[#737373] font-normal mt-5">
                 We are Cozmek Private Limited, a research and development firm
                 specializing in Artificial Intelligence. Our objective is to
                 achieve worldwide prominence in AI-driven innovations via our AI
