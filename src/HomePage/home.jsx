@@ -5,7 +5,7 @@ import Footer from "../components/footer";
 
 const Home = () => {
   return (
-    <div>
+    <div className="box-border">
       <AddressBar />
       <NavBar />
       {/* <HeroSection /> */}
