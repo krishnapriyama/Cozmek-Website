@@ -1,5 +1,4 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css"; // Import Swiper styles
 import { EffectCards } from "swiper/modules";
 import Slide from "../components/slide";
 
@@ -56,19 +55,24 @@ let card = [
   },
 ];
 // Import Swiper styles
-// import 'swiper/css';
 import "swiper/css/effect-cards";
+import "swiper/css"; // Import Swiper styles
 
 const YourComponent = () => {
   return (
     <Swiper
+      // spaceBetween={2}
+      // slidesPerView={2}
+
       effect={"cards"}
       grabCursor={true}
       modules={[EffectCards]}
-      className="w-[22.5rem] h-[37.5rem]  ">
+      className=" xs:w-[22.5rem]  xs:h-[37.5rem] h-auto w-auto">
       {card.map((Card, index) => {
         return (
-          <SwiperSlide key={index}>
+          <SwiperSlide
+            key={index}
+            className="p-0 m-0 w-[22.5rem]  xs:h-[37.5rem]">
             <Slide card={Card} />
           </SwiperSlide>
         );

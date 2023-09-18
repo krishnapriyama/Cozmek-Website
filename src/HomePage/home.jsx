@@ -9,6 +9,7 @@ const Home = () => {
       <AddressBar />
       <NavBar />
       <HeroSection />
+      
       <Footer/>
     </div>
   );
