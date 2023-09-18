@@ -31,7 +31,7 @@ const contactus = () => {
                 </button>
               </div>
               <div className="flex justify-center">
-                <p className="text-center">
+                <p className="text-center sm:text-xl">
                   Prepare yourself to enhance your skills and adapt your
                   perspective to <br />
                   align with the demands of the next century using COZMEK
