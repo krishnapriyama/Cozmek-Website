@@ -6,7 +6,7 @@ import Contactus from "../components/contactus";
 
 const Home = () => {
   return (
-    <div>
+    <div className="">
       <AddressBar />
       <NavBar />
       {/* <HeroSection /> */}

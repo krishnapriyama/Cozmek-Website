@@ -1,29 +1,37 @@
+
+import YourComponent from "../components/swiper"
+
+
+
 const HeroSection = () => {
   return (
-    <div className=" h-[51rem] custom-gradient flex-shrink-0  flex  font-medium text-[#192335CC] ">
-      <div className="w-1/2">
-        <div className="m-16 p-10 ">
-          <h1 className=" p-3 bg-white inline-block mt-9   ">
-            🏆 AI: Shaping the Future of Our World
-          </h1>
-          <h1 className="pt-4 text-6xl font-extrabold uppercase text-epilogue ">
-            Mastering the Future:
-          </h1>{" "}
-          <span className="text-epilogue text-4xl font-normal uppercase">
-            AI Pioneering Excellence
+    <div className="h-screen md:flex custom-gradient font-medium text-[#192335CC] flex-row">
+      <div className="md:w-1/2 sm:p-10 px-10 ">
+        <h1 className="p-3 bg-white inline-block mt-9">
+          🏆 AI: Shaping the Future of Our World
+        </h1>
+        <h1 className="pt-4 text-4xl md:text-6xl font-extrabold uppercase text-epilogue">
+          Mastering the Future:
+        </h1>
+        <span className="text-2xl md:text-4xl font-normal uppercase text-epilogue">
+          AI Pioneering Excellence
+        </span>
+        <p className="py-4 text-[#6B7385] text-outfit text-base md:text-lg font-normal tracking-widest capitalize">
+          Through cutting-edge programs and the guidance of seasoned experts, we
+          empower individuals of all generations, unlocking their full potential
+          in an ever-evolving world.
+          <span className="py-2 text-[#6B7385] block text-outfit font-bold tracking-wide capitalize">
+            Join us now to secure a future filled with success!
           </span>
-          <p className="py-4 text-[#6B7385] text-outfit text-base font-normal tracking-widest capitalize">
-            Through cutting-edge programs and the guidance of seasoned experts,
-            we empower individuals of all generations, unlocking their full
-            potential in an ever-evolving world.
-            <span className="py-2 text-[#6B7385] block text-outfit  font-bold tracking-wide capitalize">
-              Join us now to secure a future filled with success!
-            </span>
-          </p>
-          <button className="bg-[#0B7077D9] p-4 px-8 rounded-md text-white">View Our Programs</button>
-        </div>
+        </p>
+        <button className="bg-[#0B7077D9] p-4 px-8 rounded-md text-white">
+          View Our Programs
+        </button>
       </div>
-      <div className="w-1/2">Right Side</div>
+      <div className="w-full md:w-1/2 sm:p-10 px-4 flex py-4 justify-center ">
+        
+        <YourComponent />
+      </div>
     </div>
   );
 };
