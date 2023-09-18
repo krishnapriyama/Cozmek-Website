@@ -16,8 +16,10 @@ const contactus = () => {
       <div className="bg-[#0B7077] bg-opacity-[63%] flex justify-center items-center">
         <div className="w-full lg:w-[90%] lg:flex text-[#FFFFFF]">
           {/* Left Img */}
-          <div className="w-full flex lg:w-1/2 items-center">
+          <div className="lg:w-1/2 flex items-center justify-center">
+            <div className="w-1/2 lg:w-full">
             <Lottie options={defaultOptions} height="auto" width="90%" />
+            </div>
           </div>
 
           {/* Right Form */}
