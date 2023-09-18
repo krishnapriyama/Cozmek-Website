@@ -1,18 +1,17 @@
 const slide = ({ card }) => {
   // console.log(card);
   return (
-    <div className=" w-[22.5rem]   container  bg-white rounded-xl overflow-hidden border-2  relative">
+    <div className=" w-auto h-full container  bg-white rounded-xl overflow-hidden border-2  relative">
       <div>
         <img
-          className="h-[11.8rem] w-[22.5rem] gi"
+          className="h-[11.8rem] w-[22.5rem]"
           src={card?.mainImage}
           alt="CardImage"
         />
       </div>
       <div
-        className="flex items-center gap-5 absolute top-[11rem] left-8"
+        className="w-auto flex xs:w-[246.51px] items-center gap-5 absolute top-[11rem] left-8"
         style={{
-          width: "246.51px",
           height: "41px",
           paddingLeft: "10px",
           paddingRight: "10px",
@@ -23,14 +22,16 @@ const slide = ({ card }) => {
           justifyContent: "flex-start",
           alignItems: "center",
         }}>
-        <div className="relative" style={{ width: "91.01px", height: "31px" }}>
+        <div
+          className="relative w-auto xs:w-[91.01px]"
+          style={{ height: "31px" }}>
           {card?.roundImages.map((img, index) => {
             return (
               <img
                 key={index}
-                className={`w-[29.19px] h-[29.19px] left-[${
+                className={`w-[29.19px] h-[29.19px]  top-0 left-[${
                   card?.roundImages.length * 20 - index * 20
-                }px] top-0 absolute rounded-full border border-gray-400`}
+                }px]  absolute rounded-full border border-gray-400`}
                 src={img}
               />
             );
