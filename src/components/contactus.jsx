@@ -16,8 +16,10 @@ const contactus = () => {
       <div className="bg-[#0B7077] bg-opacity-[63%] flex justify-center items-center">
         <div className="w-full lg:w-[90%] lg:flex text-[#FFFFFF]">
           {/* Left Img */}
-          <div className="w-full flex lg:w-1/2 items-center">
+          <div className="lg:w-1/2 flex items-center justify-center">
+            <div className="w-1/2 lg:w-full">
             <Lottie options={defaultOptions} height="auto" width="90%" />
+            </div>
           </div>
 
           {/* Right Form */}
@@ -29,7 +31,7 @@ const contactus = () => {
                 </button>
               </div>
               <div className="flex justify-center">
-                <p className="text-center">
+                <p className="text-center sm:text-xl">
                   Prepare yourself to enhance your skills and adapt your
                   perspective to <br />
                   align with the demands of the next century using COZMEK
