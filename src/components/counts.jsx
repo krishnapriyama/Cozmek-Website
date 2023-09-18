@@ -6,7 +6,7 @@ import CounterCards from "./counterCards";
 const Counts = () => {
   return (
     <>
-      <div className="w-full bg-[#0B7077] bg-opacity-[63%] mb-10 flex flex-col p-5 md:gap-0 gap-10 md:p-10">
+      <div className="w-full bg-[#0B7077] bg-opacity-[63%] flex flex-col p-5 md:gap-0 gap-10 md:p-10">
         <div className="w-full text-center flex flex-col">
           <div className="flex justify-center">
             <button className="bg-[#2F57EF] font-bold uppercase bg-opacity-[13%] text-[#2F57EF] px-5 py-2 rounded-3xl text-[16px]">
