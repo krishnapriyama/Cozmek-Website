@@ -1,12 +1,16 @@
-const slide = ({card}) => {
-  console.log(card)
+const slide = ({ card }) => {
+  // console.log(card);
   return (
-    <div className=" w-[316px] h-[508px] container  bg-white rounded-lg  border-2  relative">
+    <div className=" w-[22.5rem]   container  bg-white rounded-xl overflow-hidden border-2  relative">
       <div>
-        <img src={card?.mainImage} alt="CardImage" />
+        <img
+          className="h-[11.8rem] w-[22.5rem] gi"
+          src={card?.mainImage}
+          alt="CardImage"
+        />
       </div>
       <div
-        className="flex items-center gap-5 absolute top-[9rem] left-8"
+        className="flex items-center gap-5 absolute top-[11rem] left-8"
         style={{
           width: "246.51px",
           height: "41px",
@@ -20,68 +24,37 @@ const slide = ({card}) => {
           alignItems: "center",
         }}>
         <div className="relative" style={{ width: "91.01px", height: "31px" }}>
-        <img
-            className="w-[29.19px] h-[29.19px] left-[80px] top-0 absolute rounded-full border border-gray-400"
-            src="https://via.placeholder.com/29x29"
-          />
-          <img
-            className="w-[29.19px] h-[29.19px] left-[60px] top-0 absolute rounded-full border border-gray-400"
-            src="https://via.placeholder.com/29x29"
-          />
-          <img
-            className="w-[29.19px] h-[29.19px] left-[40px] top-0 absolute rounded-full border border-gray-400"
-            src="https://via.placeholder.com/29x29"
-          />
-          <img
-            className="w-[29.19px] h-[29.19px] left-[20px] top-0 absolute rounded-full border border-gray-400"
-            src="https://via.placeholder.com/29x29"
-          />
-          <img
-            className="w-[29.19px] h-[29.19px] left-[0px] top-0 absolute rounded-full border border-gray-400"
-            src="https://via.placeholder.com/31x29"
-          />
+          {card?.roundImages.map((img, index) => {
+            return (
+              <img
+                key={index}
+                className={`w-[29.19px] h-[29.19px] left-[${
+                  card?.roundImages.length * 20 - index * 20
+                }px] top-0 absolute rounded-full border border-gray-400`}
+                src={img}
+              />
+            );
+          })}
         </div>
         <div
-          className="text-center text-gray-700 text-16 font-kanit font-normal leading-28"
+          className="text-center text-gray-700 text-16 font-kanit font-normal leading-28 "
           style={{ wordWrap: "break-word" }}>
-          +
-        </div>
-        <div
-          className="flex items-start gap-2"
-          style={{
-            width: "78.77px",
-            height: "18px",
-            justifyContent: "flex-start",
-            alignItems: "flex-start",
-          }}>
-          <div
-            className="w-9 text-center text-gray-700 text-16 font-raleway font-semibold leading-18"
-            style={{ wordWrap: "break-word" }}>
-            2
-          </div>
-          <div
-            className="text-center text-gray-700 text-14 font-raleway font-semibold leading-18"
-            style={{ wordWrap: "break-word" }}>
-            Projects
-          </div>
+          + {card?.Project} Projects
         </div>
       </div>
 
       <div className="p-4 pt-8">
-        <h4 className="font-sans text-[#9393b6] pb-4">Basic</h4>
+        <h4 className="font-sans text-[#9393b6] pb-4">{card?.type}</h4>
         <h1 className="text-2xl text-[#0B7077] font-sans font-bold">
-          AI Crash Course Program (6 Months)
+          {card?.MainHead}
         </h1>
         <p className="text-sm font-sans text-[#7b7b96] py-2">
-          Fast-track your AI skills in our 6-month program, featuring recorded
-          classes, assignments, practical sessions, CRBS exams, certifications,
-          personal mentorship, 2 projects, AI community access, and 100%
-          placement assistance.
+          {card?.Discription}
         </p>
         <div className="flex items-center justify-between pt-2">
           <div className="flex gap-3 font-extrabold">
-            <h2 className="text-red-500">₹ 15K</h2>
-            <h2 className="line-through">₹ 35K</h2>
+            <h2 className="text-red-500">₹ {card?.DiscountAmount}K</h2>
+            <h2 className="line-through">₹ {card?.OriginalAmount}K</h2>
           </div>
           <button className="bg-[#0B7077] p-2 rounded-md text-white capitalize">
             enroll now
@@ -93,6 +66,3 @@ const slide = ({card}) => {
 };
 
 export default slide;
-
-
-
