@@ -1,12 +1,7 @@
 let slide = [
   {
     mainImage: "/src/assets/BasicCardimg.png",
-    roundImages: [
-      "/src/assets/Placementassistance.png",
-      "/src/assets/recorded.png",
-      "/src/assets/placement.png",
-      "/src/assets/community.png",
-    ],
+    roundImages: "/src/assets/basic card.png",
     Project: "2",
     type: "Basic",
     MainHead: "AI Crash Course Program (6 Months)",
@@ -23,13 +18,7 @@ let slide = [
   },
   {
     mainImage: "/src/assets/InterMediateCardimg.png",
-    roundImages: [
-      "/src/assets/Live.png",
-      "/src/assets/Placementassistance.png",
-      "/src/assets/jobasistance.png",
-      "/src/assets/recorded.png",
-      "/src/assets/community.png",
-    ],
+    roundImages: "/src/assets/Intermediate card.png",
     Project: "4",
     type: "Intermediate",
     MainHead: "AI Expert Course Program (1 Year)",
@@ -46,13 +35,7 @@ let slide = [
   },
   {
     mainImage: "/src/assets/AdvanceCardImg.jpeg",
-    roundImages: [
-      "/src/assets/jobGuarantee.png",
-      "/src/assets/Live.png",
-      "/src/assets/certified.png",
-      "/src/assets/recorded.png",
-      "/src/assets/community.png",
-    ],
+    roundImages: "/src/assets/advanced card.png",
     Project: "8",
     type: "Advanced",
     MainHead: "AI Job Guarantee Program with Internship (1 Year)",
@@ -77,7 +60,7 @@ const SlideSelection = () => {
         return (
           <div
             key={index}
-            className=" max-w-[32rem] min-h-[650px]  container  bg-[#FAFAFA] rounded-xl overflow-hidden border-2  relative"
+            className=" max-w-[32rem] min-h-[720px]  container  bg-[#FAFAFA] rounded-xl overflow-hidden border-2  relative"
             style={{
               flexShrink: 0, // Prevent flex-shrinking
             }}>
@@ -101,26 +84,7 @@ const SlideSelection = () => {
                 justifyContent: "flex-start",
                 alignItems: "center",
               }}>
-              <div
-                className="relative w-auto xs:w-[91.01px]"
-                style={{ height: "31px" }}>
-                {card?.roundImages.map((img, index) => {
-                  return (
-                    <img
-                      key={index}
-                      className={`w-[29.19px] h-[29.19px]  top-0 left-[${
-                        card?.roundImages.length * 20 - index * 20
-                      }px]  absolute rounded-full border border-gray-400`}
-                      src={img}
-                    />
-                  );
-                })}
-              </div>
-              <div
-                className="text-center text-gray-700 text-16 font-kanit font-normal leading-28 "
-                style={{ wordWrap: "break-word" }}>
-                + {card?.Project} Projects
-              </div>
+              <img src={card?.roundImages} className="" alt="cards" />
             </div>
 
             <div className="p-4 pt-8 flex flex-col  ">
@@ -130,12 +94,12 @@ const SlideSelection = () => {
                 {card?.MainHead}
               </h1>
 
-              <p className="text-sm font-sans text-[#7b7b96] py-2">
+              <p className="text-sm font-sans text-[#7b7b96] py-2 leading-normal">
                 {card?.Discription}
               </p>
 
               <div className="">
-                <div className="flex items-center">
+                <div className="flex items-center py-1">
                   <img
                     src="/src/assets/ticMark.png"
                     className="w-6 mr-2 inline"
@@ -146,7 +110,7 @@ const SlideSelection = () => {
                     {card?.Curriculum}
                   </h6>
                 </div>
-                <div className="flex items-center">
+                <div className="flex items-center py-1">
                   <img
                     src="/src/assets/ticMark.png"
                     className="w-6 mr-2 inline"
@@ -157,7 +121,7 @@ const SlideSelection = () => {
                     {card?.Evaluation}
                   </h6>
                 </div>
-                <div className="flex items-center">
+                <div className="flex items-center py-1">
                   <img
                     src="/src/assets/ticMark.png"
                     className="w-6 mr-2 inline"
@@ -167,7 +131,7 @@ const SlideSelection = () => {
                     <span className="font-bold">Support</span>:{card?.Support}
                   </h6>
                 </div>
-                <div className="flex items-center">
+                <div className="flex items-center py-1">
                   <img
                     src="/src/assets/ticMark.png"
                     className="w-6 mr-2 inline"
@@ -177,7 +141,7 @@ const SlideSelection = () => {
                     <span className="font-bold">Projects</span>:{card?.Projects}
                   </h6>
                 </div>
-                <div className="flex items-center">
+                <div className="flex items-center py-1">
                   <img
                     src="/src/assets/ticMark.png"
                     className="w-6 mr-2 inline"
@@ -189,7 +153,7 @@ const SlideSelection = () => {
                   </h6>
                 </div>
 
-                <div className="flex items-center">
+                <div className="flex items-center py-1">
                   <img
                     src="/src/assets/ticMark.png"
                     className="w-6 mr-2 inline"
@@ -202,7 +166,7 @@ const SlideSelection = () => {
                 </div>
               </div>
 
-              <div className="flex items-center justify-between pt-2">
+              <div className="flex items-center justify-between pt-5">
                 <div className="flex gap-3 font-extrabold">
                   <h2 className="text-red-500">₹ {card?.DiscountAmount}K</h2>
                   <h2 className="line-through">₹ {card?.OriginalAmount}K</h2>

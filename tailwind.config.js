@@ -17,6 +17,7 @@ export default {
       //addons
       'xs1':'486px'
     },
+    
   },
   plugins: [],
 }

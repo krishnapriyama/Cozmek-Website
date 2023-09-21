@@ -4,7 +4,7 @@ const slide = ({ card }) => {
     <div className=" w-auto h-full container  bg-white rounded-xl overflow-hidden border-2  relative">
       <div>
         <img
-          className="h-[11.8rem] w-[22.5rem]"
+          className="h-[11.8rem] w-[35rem]"
           src={card?.mainImage}
           alt="CardImage"
         />
@@ -22,26 +22,8 @@ const slide = ({ card }) => {
           justifyContent: "flex-start",
           alignItems: "center",
         }}>
-        <div
-          className="relative w-auto xs:w-[91.01px]"
-          style={{ height: "31px" }}>
-          {card?.roundImages.map((img, index) => {
-            return (
-              <img
-                key={index}
-                className={`w-[29.19px] h-[29.19px]  top-0 left-[${
-                  card?.roundImages.length * 20 - index * 20
-                }px]  absolute rounded-full border border-gray-400`}
-                src={img}
-              />
-            );
-          })}
-        </div>
-        <div
-          className="text-center text-gray-700 text-16 font-kanit font-normal leading-28 "
-          style={{ wordWrap: "break-word" }}>
-          + {card?.Project} Projects
-        </div>
+          <img src={card?.roundImages} className="" alt="cards" />
+        
       </div>
 
       <div className="p-4 pt-8">

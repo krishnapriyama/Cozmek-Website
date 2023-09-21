@@ -76,11 +76,11 @@ const WorkingWith = () => {
         <div className="flex items-center justify-center md:items-end md:justify-end w-full  md:w-1/2 px-2  md:px-6">
           {" "}
           <div className="">
-            <button className="px-2 md:4 rounded-full" onClick={handlePrev}>
-              <img className="w-8 md:w-auto" src="/src/assets/left-arrow-.png" alt="Prev" />
+            <button className="px-2 md:px-4 rounded-full " onClick={handlePrev}>
+              <img className="w-8 md:w-auto rounded-full hover:bg-[#def3f3]" src="/src/assets/left-arrow-.png" alt="Prev" />
             </button>
-            <button className=" bg-[#237E7E] rounded-full" onClick={handleNext}>
-            <img className="w-8 md:w-auto" src="/src/assets/right-arrow-6421.png" alt="Next" />
+            <button className="   " onClick={handleNext}>
+            <img className="w-8 bg-[#237E7E] hover:bg-[#a4dfdf] md:w-auto rounded-full" src="/src/assets/right-arrow-6421.png" alt="Next" />
             </button>
           </div>
         </div>
