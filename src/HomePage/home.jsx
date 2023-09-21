@@ -3,12 +3,13 @@ import AddressBar from "../components/addressBar";
 import NavBar from "../components/navBar";
 import Footer from "../components/footer";
 import Contactus from "../components/contactus";
+import WorkingWith from "../components/workingWith";
+import Whatyouwillget from "../components/whatyouwillget"
 
 import AboutUs from "../components/aboutUs";
 import SlideSelection from "../components/SlideSelection";
 
 import Counts from "../components/counts";
-
 
 const Home = () => {
   return (
@@ -16,18 +17,13 @@ const Home = () => {
       <AddressBar />
       <NavBar />
       <HeroSection />
-
-      <AboutUs/>
-
-      <SlideSelection/>
-     
-     
-     
-
+      <AboutUs />
+      <SlideSelection />
+      <Whatyouwillget/>
+      <WorkingWith />
       <Counts />
       <Contactus />
       <Footer />
-
     </div>
   );
 };

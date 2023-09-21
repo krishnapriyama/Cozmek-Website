@@ -25,7 +25,7 @@ const HeroSection = () => {
           View Our Programs
         </button>
       </div>
-      <div className="w-full md:w-1/2 sm:py-10  flex py-4 px-6 items-center justify-center ">
+      <div className="w-auto md:w-1/2 sm:py-10  flex py-4 px-6 items-center justify-center ">
         <YourComponent />
       </div>
     </div>
