@@ -4,26 +4,29 @@ let points = [
   "Exploring through wide range of TECHNOLOGIES",
 ];
 
-let popins= {
+let popins = {
   fontFamily: "Poppins, sans-serif",
-}
+};
 const whatyouwillget = () => {
   return (
     <div className="flex flex-col md:flex-row items-center mx-3 my-4  xs:m-8 md:m-10 lg:m-10">
-      <div className="md:w-1/2 relative  lg:px-16">
-        <div className="relative w-full h-full">
-          <img
-            src="/src/assets/Whatyouwillget.png"
-            className=" w-full h-full"
-            alt="What you will get"
-          />
-          <div className="bg-[#EFD8C9]  rounded-3xl absolute bottom-0 left-0 w-[55%] h-[77%] -z-10"></div>
+      <div className="md:w-1/2 flex justify-center">
+        <div className="flex">
+          <div className="relative w-full h-full">
+            <img
+              src="/src/assets/Whatyouwillget.png"
+              className="w-[600px]"
+              alt="What you will get"
+            />
+            <div className="bg-[#EFD8C9] rounded-3xl absolute bottom-0 left-0 w-[85%] h-[77%] -z-10"></div>
+          </div>
         </div>
       </div>
       <div className="md:w-1/2 lg:p-6  xl:px-[6rem] ">
         <h1
           className="text-2xl md:text-4xl md:font-bold  py-4 text-[#393939]"
-          style={popins}>
+          style={popins}
+        >
           What Will You <span className="text-[#0B7077]">Get</span>?
         </h1>
         <p className="text-base md:text-lg text-[#6C6C6C] lg:mr-14">
@@ -42,8 +45,13 @@ const whatyouwillget = () => {
                   background: "#FFF",
                   boxShadow: "0px -2px 128px 0px rgba(5, 142, 110, 0.14)",
                   ...popins,
-                }}>
-                <img src="/src/assets/Tick Square.png" className="inline pr-5" alt="Tick squire" />
+                }}
+              >
+                <img
+                  src="/src/assets/Tick Square.png"
+                  className="inline pr-5"
+                  alt="Tick squire"
+                />
                 <h4 className="text-base md:text-lg inline ">{point}</h4>
               </div>
             );
