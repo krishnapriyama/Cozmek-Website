@@ -5,12 +5,7 @@ import Slide from "../components/slide";
 let card = [
   {
     mainImage: "/src/assets/BasicCardimg.png",
-    roundImages: [
-      "/src/assets/Placementassistance.png",
-      "/src/assets/recorded.png",
-      "/src/assets/placement.png",
-      "/src/assets/community.png",
-    ],
+    roundImages: "/src/assets/basic card.png",
     Project: "2",
     type: "Basic",
     MainHead: "AI Crash Course Program (6 Months)",
@@ -21,13 +16,7 @@ let card = [
   },
   {
     mainImage: "/src/assets/InterMediateCardimg.png",
-    roundImages: [
-      "/src/assets/Live.png",
-      "/src/assets/Placementassistance.png",
-      "/src/assets/jobasistance.png",
-      "/src/assets/recorded.png",
-      "/src/assets/community.png",
-    ],
+    roundImages: "/src/assets/Intermediate card.png",
     Project: "4",
     type: "Intermediate",
     MainHead: "AI Expert Course Program (1 Year)",
@@ -38,13 +27,7 @@ let card = [
   },
   {
     mainImage: "/src/assets/AdvanceCardImg.jpeg",
-    roundImages: [
-      "/src/assets/jobGuarantee.png",
-      "/src/assets/Live.png",
-      "/src/assets/certified.png",
-      "/src/assets/recorded.png",
-      "/src/assets/community.png",
-    ],
+    roundImages: "/src/assets/advanced card.png",
     Project: "8",
     type: "Advanced",
     MainHead: "AI Job Guarantee Program with Internship (1 Year)",
@@ -56,7 +39,7 @@ let card = [
 ];
 // Import Swiper styles
 import "swiper/css/effect-cards";
-import "swiper/css"; // Import Swiper styles
+import "swiper/css";
 
 const YourComponent = () => {
   return (
@@ -67,12 +50,14 @@ const YourComponent = () => {
       effect={"cards"}
       grabCursor={true}
       modules={[EffectCards]}
-      className=" xs:w-[22.5rem]  xs:h-[37.5rem] h-auto w-auto">
+      className=" xs:w-[22.5rem]  xs:h-[37.5rem] xl:w-[30.5rem] xl:h-[32.5rem] h-auto w-auto"
+      >
       {card.map((Card, index) => {
         return (
           <SwiperSlide
             key={index}
-            className="p-0 m-0 w-[22.5rem]  xs:h-[37.5rem]">
+            className="p-0 m-0 w-[22.5rem]  xs:h-[37.5rem]"
+            >
             <Slide card={Card} />
           </SwiperSlide>
         );
