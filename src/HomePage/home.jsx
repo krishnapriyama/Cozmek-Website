@@ -1,17 +1,17 @@
-import AddressBar from "../components/1addressBar";
-import NavBar from "../components/2navBar";
-import HeroSection from "../components/3heroSection";
-import AboutUs from "../components/4aboutUs";
-import SlideSelection from "../components/5SlideSelection";
-import Whatyouwillget from "../components/6whatyouwillget"
+import AddressBar from "../components/addressBar";
+import NavBar from "../components/navBar";
+import HeroSection from "../components/heroSection";
+import AboutUs from "../components/aboutUs";
+import SlideSelection from "../components/SlideSelection";
+import Whatyouwillget from "../components/whatyouwillget"
 import Footer from "../components/footer";
-import Youtube from "../components/8youtube";
+import Youtube from "../components/youtube";
 import Contactus from "../components/contactus";
-import WorkingWith from "../components/7workingWith";
+import WorkingWith from "../components/workingWith";
 
 
-import Counts from "../components/9counts";
-import Testimonals from "../components/10testimonals";
+import Counts from "../components/counts";
+import Testimonals from "../components/testimonals";
 
 const Home = () => {
   return (

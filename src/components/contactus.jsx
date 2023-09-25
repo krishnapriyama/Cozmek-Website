@@ -1,8 +1,16 @@
 import Lottie from "react-lottie";
 import animationData from "../assets/contactus_animation.json";
+import { useState } from "react";
 import { useRef } from "react";
 
 const Contactus = () => {
+  const [formdata, setFormData] = useState({
+    Email: "",
+    FullName: "",
+    Coures: "",
+    PhoneNumber: "",
+  });
+
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -12,15 +20,44 @@ const Contactus = () => {
     },
   };
 
+  const submitHandler = () => {
+    console.log(formdata);
+    setFormData({
+      Email: "",
+      FullName: "",
+      Coures: "",
+      PhoneNumber: "",
+    });
+    fetch(
+      "https://script.google.com/macros/s/AKfycbwftkWhwdoA6QXsT4SajNKK7POvbCr38uc_KSw9PyChLBP5TF2FnHYq3BS-AJncl3QdBg/exec",
+      {
+        method: "POST",
+        mode: "cors",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: new URLSearchParams(formdata).toString(),
+      }
+    )
+      .then(() => {
+        alert("Form Submited Successfully");
+      })
+      .catch((err) => {
+        alert(err);
+      });
+  };
+
   const registerRef = useRef();
   return (
     <div id="register" ref={registerRef}>
-      <div className="bg-[#0B7077] bg-opacity-[63%] flex justify-center items-center">
+      <div
+        className="bg-[#0B7077] bg-opacity-[63%] flex justify-center items-center"
+        id="contactUs">
         <div className="w-full lg:w-[90%] lg:flex text-[#FFFFFF]">
           {/* Left Img */}
           <div className="lg:w-1/2 flex items-center justify-center">
             <div className="w-1/2 lg:w-full">
-            <Lottie options={defaultOptions} height="auto" width="90%" />
+              <Lottie options={defaultOptions} height="auto" width="90%" />
             </div>
           </div>
 
@@ -59,14 +96,23 @@ const Contactus = () => {
                   </div>
 
                   {/* Form */}
-                  <form>
+                  <form id="gform">
                     <div className="mb-4">
                       <label className="text-black">E-MAIL</label>
                       <input
                         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         id="username"
                         type="email"
+                        name="Email"
                         placeholder="alex_manager@gmail.com"
+                        value={formdata?.Email}
+                        onChange={(e) => {
+                          const { value, name } = e.target;
+                          setFormData((prevState) => ({
+                            ...prevState,
+                            [name]: value,
+                          }));
+                        }}
                       />
                     </div>
                     <div className="mb-4">
@@ -75,7 +121,16 @@ const Contactus = () => {
                         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         id="username"
                         type="text"
+                        name="FullName"
                         placeholder="John Doe"
+                        value={formdata?.FullName}
+                        onChange={(e) => {
+                          const { value, name } = e.target;
+                          setFormData((prevState) => ({
+                            ...prevState,
+                            [name]: value,
+                          }));
+                        }}
                       />
                     </div>
                     <div className="mb-4">
@@ -83,15 +138,23 @@ const Contactus = () => {
                       <select
                         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         id="course"
-                      >
+                        name="Coures"
+                        onChange={(e) => {
+                          const { value, name } = e.target;
+                          setFormData((prevState) => ({
+                            ...prevState,
+                            [name]: value,
+                          }));
+                        }}
+                        value={formdata?.Coures}>
                         <option value="">Select a course</option>
-                        <option value="0000000000">
+                        <option value="AI Crash Course Programe (6-Months)">
                           AI Crash Course Programe (6-Months)
                         </option>
-                        <option value="000-000-0000">
+                        <option value="AI Expert Course Programe (1-Year)">
                           AI Expert Course Programe (1-Year)
                         </option>
-                        <option value="000-000-0000">
+                        <option value="AI Job Guarantee Programe with Internship (1-Year)">
                           AI Job Guarantee Programe with Internship (1-Year)
                         </option>
                       </select>
@@ -103,14 +166,25 @@ const Contactus = () => {
                         id="username"
                         type="number"
                         placeholder="000 0000 0000"
+                        name="PhoneNumber"
+                        onChange={(e) => {
+                          const { value, name } = e.target;
+                          setFormData((prevState) => ({
+                            ...prevState,
+                            [name]: value,
+                          }));
+                        }}
+                        value={formdata?.PhoneNumber}
                       />
                     </div>
 
                     <div className="flex items-center justify-end mt-5">
                       <button
                         className="bg-[#0093B0] text-white font-bold py-2 px-6"
-                        type="button"
-                      >
+                        onClick={(e) => {
+                          e.preventDefault();
+                          submitHandler();
+                        }}>
                         Submit
                       </button>
                     </div>
