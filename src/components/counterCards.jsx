@@ -1,11 +1,32 @@
 /* eslint-disable react/prop-types */
+import { useState } from "react";
 import CountUp from "react-countup";
+import VisibilitySensor from "react-visibility-sensor";
 
-export default function Counter({ number, title }) {
+const CounterCards = ({ number, title }) => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const onVisibilityChange = (isVisible) => {
+    if (isVisible) {
+      setIsVisible(true);
+    }
+  };
+
   return (
-    <div className="number">
-      <CountUp duration={10} className="counter" end={number} />
-      <span>{title}</span>
-    </div>
+    <VisibilitySensor onChange={onVisibilityChange} partialVisibility>
+      {({ isVisible: counterVisible }) => (
+        <div className="number">
+          <CountUp
+            start={isVisible ? 0 : null}
+            end={counterVisible ? number : null}
+            duration={4}
+            useEasing={true}
+          />
+          <span>{title}</span>
+        </div>
+      )}
+    </VisibilitySensor>
   );
-}
+};
+
+export default CounterCards;

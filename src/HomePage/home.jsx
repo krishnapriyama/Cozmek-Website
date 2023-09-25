@@ -10,7 +10,7 @@ import Contactus from "../components/contactus";
 import WorkingWith from "../components/7workingWith";
 
 
-import Counts from "../components/counts";
+import Counts from "../components/9counts";
 import Testimonals from "../components/testimonals";
 
 const Home = () => {
