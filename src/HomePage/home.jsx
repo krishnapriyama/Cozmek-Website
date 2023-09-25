@@ -11,7 +11,7 @@ import WorkingWith from "../components/7workingWith";
 
 
 import Counts from "../components/9counts";
-import Testimonals from "../components/testimonals";
+import Testimonals from "../components/10testimonals";
 
 const Home = () => {
   return (
