@@ -1,7 +1,8 @@
 import Lottie from "react-lottie";
 import animationData from "../assets/contactus_animation.json";
+import { useRef } from "react";
 
-const contactus = () => {
+const Contactus = () => {
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -11,8 +12,9 @@ const contactus = () => {
     },
   };
 
+  const registerRef = useRef();
   return (
-    <>
+    <div id="register" ref={registerRef}>
       <div className="bg-[#0B7077] bg-opacity-[63%] flex justify-center items-center">
         <div className="w-full lg:w-[90%] lg:flex text-[#FFFFFF]">
           {/* Left Img */}
@@ -119,8 +121,8 @@ const contactus = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
-export default contactus;
+export default Contactus;

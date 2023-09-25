@@ -26,7 +26,18 @@ const testimonals = () => {
     {
       id: 1,
       value: 3,
-      text: "With Cozmek, we can make it easier for you to master a foreign language, it is important for us to grow and engage with our students",
+      text: `The Cozmek python-Ai add-on course was one of the leading courses in this scenario which beginners could build a career using the same.
+      I am so satisfied with the class and teaching method that the faculty used to make us realize what the course was. The description of each and every topic was explained in simple language so that a beginner could grasp the topic easily. And also the faculty was so friendly. We feel free to ask doubt at any time.
+      THANK YOU TEAM COZMEK`,
+      name: "Jaquon Hart",
+      position: "Data Science Engineer, Infosys",
+    },
+    {
+      id: 1,
+      value: 3,
+      text: `The Cozmek python-Ai add-on course was one of the leading courses in this scenario which beginners could build a career using the same.
+      I am so satisfied with the class and teaching method that the faculty used to make us realize what the course was. The description of each and every topic was explained in simple language so that a beginner could grasp the topic easily. And also the faculty was so friendly. We feel free to ask doubt at any time.
+      THANK YOU TEAM COZMEK`,
       name: "Jaquon Hart",
       position: "Data Science Engineer, Infosys",
     },

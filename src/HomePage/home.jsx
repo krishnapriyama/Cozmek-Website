@@ -1,14 +1,14 @@
-import HeroSection from "../components/HeroSection";
-import AddressBar from "../components/addressBar";
-import NavBar from "../components/navBar";
+import AddressBar from "../components/1addressBar";
+import NavBar from "../components/2navBar";
+import HeroSection from "../components/3heroSection";
+import AboutUs from "../components/4aboutUs";
+import SlideSelection from "../components/5SlideSelection";
+import Whatyouwillget from "../components/6whatyouwillget"
 import Footer from "../components/footer";
 import Youtube from "../components/youtube";
 import Contactus from "../components/contactus";
 import WorkingWith from "../components/workingWith";
-import Whatyouwillget from "../components/whatyouwillget"
 
-import AboutUs from "../components/aboutUs";
-import SlideSelection from "../components/SlideSelection";
 
 import Counts from "../components/counts";
 import Testimonals from "../components/testimonals";

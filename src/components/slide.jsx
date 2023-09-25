@@ -1,4 +1,11 @@
 const slide = ({ card }) => {
+  // Register
+  const handleRegisterClick = () => {
+    const registerRef = document.querySelector("#register");
+    if (registerRef) {
+      registerRef.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <div className=" w-auto h-full container  bg-white rounded-xl overflow-hidden border-2  relative">
       <div>
@@ -35,10 +42,10 @@ const slide = ({ card }) => {
         </p>
         <div className="flex items-center justify-between pt-2">
           <div className="flex gap-3 font-extrabold">
-            <h2 className="text-red-500">₹ {card?.DiscountAmount}K</h2>
-            <h2 className="line-through">₹ {card?.OriginalAmount}K</h2>
+            <h2 className="text-green-500 text-2xl">₹ {card?.DiscountAmount}</h2>
+            <h2 className="line-through text-red-500">₹ {card?.OriginalAmount}</h2>
           </div>
-          <button className="bg-[#0B7077] p-2 rounded-md text-white capitalize">
+          <button className="bg-[#0B7077] hover:bg-[#329aa1] p-2 rounded-md text-white capitalize" onClick={handleRegisterClick}>
             enroll now
           </button>
         </div>

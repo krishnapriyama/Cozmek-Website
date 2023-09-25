@@ -1,6 +1,7 @@
 import { Typography } from "@material-tailwind/react";
+import { useRef } from "react";
 
-const footer = () => {
+const Footer = () => {
   const LINKS = [
     {
       title: "Features",
@@ -32,8 +33,9 @@ const footer = () => {
   ];
 
   const currentYear = new Date().getFullYear();
-
+  const footerRef = useRef();
   return (
+    <div id="footer" ref={footerRef}>
     <footer className="relative w-full font-montserrat">
       {/* Top Footer */}
       <div className="mx-auto w-[85%] mt-10">
@@ -196,7 +198,8 @@ const footer = () => {
         </div>
       </div>
     </footer>
+    </div>
   );
 };
 
-export default footer;
+export default Footer;

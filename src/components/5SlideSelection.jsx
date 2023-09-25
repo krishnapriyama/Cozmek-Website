@@ -1,7 +1,15 @@
+import BasicCardimg from "/src/assets/BasicCardimg.png";
+import basiccard from "/src/assets/basic card.png";
+import InterMediateCardimg from "/src/assets/InterMediateCardimg.png"
+import Intermediatecard from "/src/assets/Intermediate card.png"
+import AdvanceCardImg from "/src/assets/AdvanceCardImg.jpeg"
+import advancecardround from "/src/assets/advanced card.png"
+import ticMark from "/src/assets/ticMark.png"
+import { useRef } from "react";
 let slide = [
   {
-    mainImage: "/src/assets/BasicCardimg.png",
-    roundImages: "/src/assets/basic card.png",
+    mainImage: BasicCardimg,
+    roundImages: basiccard,
     Project: "2",
     type: "Basic",
     MainHead: "AI Crash Course Program (6 Months)",
@@ -17,8 +25,8 @@ let slide = [
     Placement: "100% Placement Assistance",
   },
   {
-    mainImage: "/src/assets/InterMediateCardimg.png",
-    roundImages: "/src/assets/Intermediate card.png",
+    mainImage: InterMediateCardimg,
+    roundImages: Intermediatecard,
     Project: "4",
     type: "Intermediate",
     MainHead: "AI Expert Course Program (1 Year)",
@@ -34,8 +42,8 @@ let slide = [
     Placement: "100% Placement Assistance",
   },
   {
-    mainImage: "/src/assets/AdvanceCardImg.jpeg",
-    roundImages: "/src/assets/advanced card.png",
+    mainImage: AdvanceCardImg,
+    roundImages: advancecardround,
     Project: "8",
     type: "Advanced",
     MainHead: "AI Job Guarantee Program with Internship (1 Year)",
@@ -52,9 +60,20 @@ let slide = [
     Placement: "100% Job Guarantee, 6-Month Internship",
   },
 ];
+
+// Register
+const handleRegisterClick = () => {
+  const registerRef = document.querySelector("#register");
+  if (registerRef) {
+    registerRef.scrollIntoView({ behavior: "smooth" });
+  }
+};
+
 const SlideSelection = () => {
+  const programeRef = useRef();
   return (
-    <div className="flex-wrap w-auto h-auto px-3 py-4 gap-5 flex items-center justify-center  my-5">
+    <div id="programe" ref={programeRef}>
+    <div className="flex-wrap w-auto h-auto px-3 py-4 gap-5 flex items-center justify-center md:mt-20 mt-10 my-5">
       {slide.map((card, index) => {
         return (
           <div
@@ -100,7 +119,7 @@ const SlideSelection = () => {
               <div className="">
                 <div className="flex items-center py-1">
                   <img
-                    src="/src/assets/ticMark.png"
+                    src={ticMark}
                     className="w-6 mr-2 inline"
                     alt="."
                   />
@@ -111,7 +130,7 @@ const SlideSelection = () => {
                 </div>
                 <div className="flex items-center py-1">
                   <img
-                    src="/src/assets/ticMark.png"
+                    src={ticMark}
                     className="w-6 mr-2 inline"
                     alt="."
                   />
@@ -122,7 +141,7 @@ const SlideSelection = () => {
                 </div>
                 <div className="flex items-center py-1">
                   <img
-                    src="/src/assets/ticMark.png"
+                    src={ticMark}
                     className="w-6 mr-2 inline"
                     alt="."
                   />
@@ -132,7 +151,7 @@ const SlideSelection = () => {
                 </div>
                 <div className="flex items-center py-1">
                   <img
-                    src="/src/assets/ticMark.png"
+                    src={ticMark}
                     className="w-6 mr-2 inline"
                     alt="."
                   />
@@ -142,7 +161,7 @@ const SlideSelection = () => {
                 </div>
                 <div className="flex items-center py-1">
                   <img
-                    src="/src/assets/ticMark.png"
+                    src={ticMark}
                     className="w-6 mr-2 inline"
                     alt="."
                   />
@@ -154,7 +173,7 @@ const SlideSelection = () => {
 
                 <div className="flex items-center py-1">
                   <img
-                    src="/src/assets/ticMark.png"
+                    src={ticMark}
                     className="w-6 mr-2 inline"
                     alt="."
                   />
@@ -167,11 +186,13 @@ const SlideSelection = () => {
 
               <div className="flex items-center justify-between pt-5">
                 <div className="flex gap-3 font-extrabold">
-                  <h2 className="text-red-500">₹ {card?.DiscountAmount}</h2>
-                  <h2 className="line-through">₹ {card?.OriginalAmount}</h2>
+
+                  <h2 className="text-green-500 text-2xl">₹ {card?.DiscountAmount}</h2>
+                  <h2 className="line-through text-red-500">₹ {card?.OriginalAmount}</h2>
+
                 </div>
 
-                <button className="bg-[#0B7077] p-2 rounded-md text-white capitalize">
+                <button className="bg-[#6fb0b4] hover:bg-green-500 p-2 rounded-md text-white capitalize" onClick={handleRegisterClick}>
                   enroll now
                 </button>
               </div>
@@ -179,6 +200,7 @@ const SlideSelection = () => {
           </div>
         );
       })}
+    </div>
     </div>
   );
 };
