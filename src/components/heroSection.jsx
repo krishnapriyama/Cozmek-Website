@@ -7,10 +7,12 @@ const HeroSection = () => {
         <h1 className="p-3 bg-white inline-block mt-9">
           🏆 AI: Shaping the Future of Our World
         </h1>
-        <h1 className="pt-4 text-2xl xs:text-4xl md:text-6xl font-extrabold uppercase text-epilogue">
+        <h1 className="pt-4 text-2xl xs:text-4xl md:text-6xl font-extrabold uppercase text-epilogue" >
           Mastering the Future:
         </h1>
-        <span className="text-xl xs:text-2xl md:text-4xl font-normal uppercase text-epilogue">
+        <span className="text-xl xs:text-2xl md:text-4xl font-normal uppercase text-epilogue" style={{
+          fontFamily: 'Epilogue, sans-serif'
+        }}>
           AI Pioneering Excellence
         </span>
         <p className="py-4 text-[#6B7385] text-outfit text-base md:text-lg font-normal tracking-widest capitalize">
@@ -21,7 +23,7 @@ const HeroSection = () => {
             Join us now to secure a future filled with success!
           </span>
         </p>
-        <button className="bg-[#0B7077D9] p-4 px-8 rounded-md text-white">
+        <button className="bg-[#0B7077D9] hover:bg-green-600 hover:px-9 hover:p-5 p-4 px-8 rounded-md text-white">
           View Our Programs
         </button>
       </div>
