@@ -30,34 +30,7 @@ const testimonals = () => {
       name: "Jaquon Hart",
       position: "Data Science Engineer, Infosys",
     },
-    {
-      id: 1,
-      value: 3,
-      text: "With Cozmek, we can make it easier for you to master a foreign language, it is important for us to grow and engage with our students",
-      name: "Jaquon Hart",
-      position: "Data Science Engineer, Infosys",
-    },
-    {
-      id: 1,
-      value: 3,
-      text: "With Cozmek, we can make it easier for you to master a foreign language, it is important for us to grow and engage with our students",
-      name: "Jaquon Hart",
-      position: "Data Science Engineer, Infosys",
-    },
-    {
-      id: 1,
-      value: 3,
-      text: "With Cozmek, we can make it easier for you to master a foreign language, it is important for us to grow and engage with our students",
-      name: "Jaquon Hart",
-      position: "Data Science Engineer, Infosys",
-    },
-    {
-      id: 1,
-      value: 3,
-      text: "With Cozmek, we can make it easier for you to master a foreign language, it is important for us to grow and engage with our students",
-      name: "Jaquon Hart",
-      position: "Data Science Engineer, Infosys",
-    },
+    
   ];
   return (
     <>

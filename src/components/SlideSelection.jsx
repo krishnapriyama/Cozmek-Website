@@ -7,8 +7,8 @@ let slide = [
     MainHead: "AI Crash Course Program (6 Months)",
     Discription:
       "Embark on your AI journey with our 6-month Crash Program. Dive into the world of Artificial Intelligence through expertly curated content, assignments, practical sessions, and rigorous exams. Achieve industry-recognized certifications, guided by a personal mentor. Engage in two real-world AI projects, access our vibrant AI community, and rest assured with our 100% Placement Assistance.",
-    DiscountAmount: "15",
-    OriginalAmount: "25",
+    DiscountAmount: "15,000",
+    OriginalAmount: "25,000",
     Curriculum: "Recorded Classes, Assignments, Practicals",
     Evaluation: "Exams and CRBS Certification",
     Support: "Personal Mentor",
@@ -24,8 +24,8 @@ let slide = [
     MainHead: "AI Expert Course Program (1 Year)",
     Discription:
       "Elevate your AI skills in our 1-year Expert Program. With a mix of recorded and live classes, hands-on assignments, and CRBS certifications, you'll tackle four impactful AI projects. Engage with our thriving AI community, participate in Hackathons, and receive specialized interview training for a successful career, all backed by our 100% Placement Assistance.",
-    DiscountAmount: "30",
-    OriginalAmount: "45",
+    DiscountAmount: "30,000",
+    OriginalAmount: "45,000",
     Curriculum: "Recorded & Live Classes, Assignments, Practicals",
     Evaluation: "Exams and CRBS Certifications",
     Support: "Personal Mentor, Interview Training, Expert Talk Sessions",
@@ -41,9 +41,8 @@ let slide = [
     MainHead: "AI Job Guarantee Program with Internship (1 Year)",
     Discription:
       "Secure your AI career with our 1-year Job Guarantee Program. Enjoy recorded/live classes, assignments, CRBS certifications, and 8+ AI projects. Engage in our AI community, Hackathons, and receive interview training, a 6-month internship, Money-Back Job Guarantee, and 100% Job Guarantee.",
-    DiscountAmount: "60",
-    OriginalAmount: "85",
-
+    DiscountAmount: "60,000",
+    OriginalAmount: "85,000",
     Curriculum: "Recorded and Live Classes, Assignments, Practicals",
     Evaluation: " Exams and CRBS Certifications",
     Support:
@@ -168,8 +167,8 @@ const SlideSelection = () => {
 
               <div className="flex items-center justify-between pt-5">
                 <div className="flex gap-3 font-extrabold">
-                  <h2 className="text-red-500">₹ {card?.DiscountAmount}K</h2>
-                  <h2 className="line-through">₹ {card?.OriginalAmount}K</h2>
+                  <h2 className="text-red-500">₹ {card?.DiscountAmount}</h2>
+                  <h2 className="line-through">₹ {card?.OriginalAmount}</h2>
                 </div>
 
                 <button className="bg-[#0B7077] p-2 rounded-md text-white capitalize">

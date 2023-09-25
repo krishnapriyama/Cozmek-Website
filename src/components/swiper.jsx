@@ -37,16 +37,12 @@ let card = [
     OriginalAmount: "85",
   },
 ];
-// Import Swiper styles
 import "swiper/css/effect-cards";
 import "swiper/css";
 
 const YourComponent = () => {
   return (
     <Swiper
-      // spaceBetween={2}
-      // slidesPerView={2}
-
       effect={"cards"}
       grabCursor={true}
       modules={[EffectCards]}
@@ -62,8 +58,6 @@ const YourComponent = () => {
           </SwiperSlide>
         );
       })}
-
-      {/* ... Add more SwiperSlide components for additional slides */}
     </Swiper>
   );
 };

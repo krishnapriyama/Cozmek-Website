@@ -1,5 +1,4 @@
 const slide = ({ card }) => {
-  // console.log(card);
   return (
     <div className=" w-auto h-full container  bg-white rounded-xl overflow-hidden border-2  relative">
       <div>
