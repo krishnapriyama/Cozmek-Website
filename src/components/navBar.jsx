@@ -18,13 +18,13 @@ const NavBar = () => {
           </span>
         </div>
         <div>
-          <a href="/">Contact</a>
+          <a href="#contactUs">Contact</a>
         </div>
         <div>
-          <a href="/">About</a>
+          <a href="#aboutUS">About</a>
         </div>
         <div>
-          <a href="/">Register</a>
+          <a href="#contactUs">Register</a>
         </div>
       </div>
       <div className="hidden md:block">

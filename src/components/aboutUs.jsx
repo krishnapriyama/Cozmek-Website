@@ -23,7 +23,7 @@ const AboutUs = () => {
   };
 
   return (
-    <div className="flex flex-col sm:flex-row items-center justify-center p-4">
+    <div className="flex flex-col sm:flex-row items-center justify-center p-4" id="aboutUS">
       <div className="sm:w-1/2 w-full mb-4 sm:mb-0">
         <Lottie options={defaultOptions} height="auto" width="90%" />
       </div>
