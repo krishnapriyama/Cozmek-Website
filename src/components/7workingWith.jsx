@@ -1,24 +1,24 @@
 import { useEffect, useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
-import LeftArrow from "/src/assets/left-arrow-.png"
-import RightArrow from "/src/assets/right-arrow-6421.png"
-import imglogo1 from "/src/assets/workwith1.png"
-  import imglogo2 from "/src/assets/workwith2.png"
-  import imglogo3 from "/src/assets/workwith3.png"
-  import imglogo4 from "/src/assets/workwith4.png"
-  import imglogo5 from "/src/assets/workwith5.png"
-  import imglogo6 from "/src/assets/workwith6.png"
-  import imglogo7 from "/src/assets/workwith1.png"
-  import imglogo8 from "/src/assets/workwith2.png"
-  import imglogo9 from "/src/assets/workwith3.png"
-  import imglogo10 from "/src/assets/workwith4.png"
-  import imglogo11 from "/src/assets/workwith5.png"
-  import imglogo12 from "/src/assets/workwith6.png"
-  import imglogo13 from "/src/assets/workwith1.png"
-  import imglogo14 from "/src/assets/workwith2.png"
-  import imglogo15 from "/src/assets/workwith3.png"
-  import imglogo16 from "/src/assets/workwith4.png"
+import LeftArrow from "/src/assets/left-arrow-.png";
+import RightArrow from "/src/assets/right-arrow-6421.png";
+import imglogo1 from "/src/assets/workwith1.png";
+import imglogo2 from "/src/assets/workwith2.png";
+import imglogo3 from "/src/assets/workwith3.png";
+import imglogo4 from "/src/assets/workwith4.png";
+import imglogo5 from "/src/assets/workwith5.png";
+import imglogo6 from "/src/assets/workwith6.png";
+import imglogo7 from "/src/assets/workwith1.png";
+import imglogo8 from "/src/assets/workwith2.png";
+import imglogo9 from "/src/assets/workwith3.png";
+import imglogo10 from "/src/assets/workwith4.png";
+import imglogo11 from "/src/assets/workwith5.png";
+import imglogo12 from "/src/assets/workwith6.png";
+import imglogo13 from "/src/assets/workwith1.png";
+import imglogo14 from "/src/assets/workwith2.png";
+import imglogo15 from "/src/assets/workwith3.png";
+import imglogo16 from "/src/assets/workwith4.png";
 
 const logo = [
   imglogo1,
@@ -36,8 +36,7 @@ const logo = [
   imglogo13,
   imglogo14,
   imglogo15,
-  imglogo16
- 
+  imglogo16,
 ];
 // Import Swiper styles
 
@@ -77,21 +76,29 @@ const WorkingWith = () => {
 
   return (
     <div className="w-100% h-auto bg-[#F7F7FA]">
-      <div className="md:flex ">
-        <div className="text-sm sm:text-lg py-10  md:text-2xl px-10 md:w-1/2 ">
+      <div className="md:flex">
+        <div className="text-xl py-10 md:text-2xl px-10 md:w-3/4">
           <h2>
             Meet the People build there career with AI; Artifical Intelligence
           </h2>
           <h1 className="font-bold">Who are Working With</h1>
         </div>
-        <div className="flex items-center justify-center md:items-end md:justify-end w-full  md:w-1/2 px-2  md:px-6">
+        <div className="flex items-center justify-center md:items-end md:justify-end w-full  md:w-1/4 px-2  md:px-6">
           {" "}
           <div className="">
             <button className="px-2 md:px-4 rounded-full " onClick={handlePrev}>
-              <img className="w-8 md:w-auto rounded-full hover:bg-[#def3f3]" src={LeftArrow} alt="Prev" />
+              <img
+                className="w-8 md:w-auto rounded-full hover:bg-[#def3f3]"
+                src={LeftArrow}
+                alt="Prev"
+              />
             </button>
             <button className="   " onClick={handleNext}>
-            <img className="w-8 bg-[#237E7E] hover:bg-[#a4dfdf] md:w-auto rounded-full" src={RightArrow} alt="Next" />
+              <img
+                className="w-8 bg-[#237E7E] hover:bg-[#a4dfdf] md:w-auto rounded-full"
+                src={RightArrow}
+                alt="Next"
+              />
             </button>
           </div>
         </div>
@@ -108,7 +115,8 @@ const WorkingWith = () => {
           // pagination={{ clickable: true }}
           // scrollbar={{ draggable: true }}
           onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log("slide change")}>
+          onSlideChange={() => console.log("slide change")}
+        >
           {logo.map((img, i) => {
             return (
               <SwiperSlide key={i} className="w-25% md:w-100%">

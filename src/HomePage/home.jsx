@@ -5,9 +5,9 @@ import AboutUs from "../components/4aboutUs";
 import SlideSelection from "../components/5SlideSelection";
 import Whatyouwillget from "../components/6whatyouwillget"
 import Footer from "../components/footer";
-import Youtube from "../components/youtube";
+import Youtube from "../components/8youtube";
 import Contactus from "../components/contactus";
-import WorkingWith from "../components/workingWith";
+import WorkingWith from "../components/7workingWith";
 
 
 import Counts from "../components/counts";

@@ -11,8 +11,8 @@ let popins = {
 };
 const whatyouwillget = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center mx-3 my-4  xs:m-8 md:m-10 lg:m-10">
-      <div className="md:w-1/2 flex justify-center">
+    <div className="flex flex-col md:flex-row items-center mx-3 my-4 mt-10 md:mt-20 mb-20">
+      <div className="md:w-1/2 flex ml-10 md:ml-0 justify-center">
         <div className="flex">
           <div className="relative w-full h-full">
             <img
@@ -24,7 +24,7 @@ const whatyouwillget = () => {
           </div>
         </div>
       </div>
-      <div className="md:w-1/2 lg:p-6  xl:px-[6rem] ">
+      <div className="md:w-1/2 md:mt-0 mt-10 ml-10 md:ml-0 lg:p-6 xl:px-[6rem] ">
         <h1
           className="text-2xl md:text-4xl md:font-bold  py-4 text-[#393939]"
           style={popins}
@@ -41,7 +41,7 @@ const whatyouwillget = () => {
             return (
               <div
                 key={i}
-                className=" py-6 pl-6 w-10/12 my-6 xs:my-3 md:my-6 text-sm "
+                className=" flex items-center py-6 pl-6 w-10/12 my-6 xs:my-3 md:my-6 text-sm "
                 style={{
                   borderRadius: "16px",
                   background: "#FFF",
@@ -49,12 +49,16 @@ const whatyouwillget = () => {
                   ...popins,
                 }}
               >
+                <div>
                 <img
                   src={TickSqr}
                   className="inline pr-5"
                   alt="Tick squire"
                 />
+                </div>
+                <div>
                 <h4 className="text-base md:text-lg inline ">{point}</h4>
+                </div>
               </div>
             );
           })}

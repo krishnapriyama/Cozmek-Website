@@ -192,7 +192,7 @@ const SlideSelection = () => {
 
                 </div>
 
-                <button className="bg-[#6fb0b4] hover:bg-green-500 p-2 rounded-md text-white capitalize" onClick={handleRegisterClick}>
+                <button className="bg-[#0B7077] hover:bg-[#329aa1] p-2 rounded-md text-white capitalize" onClick={handleRegisterClick}>
                   enroll now
                 </button>
               </div>
