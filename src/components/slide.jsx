@@ -36,10 +36,10 @@ const slide = ({ card }) => {
         </p>
         <div className="flex items-center justify-between pt-2">
           <div className="flex gap-3 font-extrabold">
-            <h2 className="text-red-500">₹ {card?.DiscountAmount}K</h2>
-            <h2 className="line-through">₹ {card?.OriginalAmount}K</h2>
+            <h2 className="text-green-500 text-2xl">₹ {card?.DiscountAmount}K</h2>
+            <h2 className="line-through text-red-500">₹ {card?.OriginalAmount}K</h2>
           </div>
-          <button className="bg-[#0B7077] p-2 rounded-md text-white capitalize">
+          <button className="bg-[#0B7077] hover:bg-green-600 hover:p-3 p-2 rounded-md text-white capitalize">
             enroll now
           </button>
         </div>
