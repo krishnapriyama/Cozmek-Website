@@ -40,12 +40,18 @@ const Testimonials = () => {
       position: "Dist Angamaly 2nd Year Student",
     },
   ];
+  const [showMoreStates, setShowMoreStates] = useState(
+    reviews.map(() => false)
+  );
 
-  const [showMore, setShowMore] = useState(false);
+  const toggleShowMore = (index) => {
+    const updatedShowMoreStates = [...showMoreStates];
+    updatedShowMoreStates[index] = !updatedShowMoreStates[index];
+    setShowMoreStates(updatedShowMoreStates);
+  };
 
-
-  const toggleShowMore = () => {
-    setShowMore(!showMore);
+  const toggle = () => {
+    setShowMoreStates(reviews.map(() => false));
   };
 
   return (
@@ -61,45 +67,52 @@ const Testimonials = () => {
         </h1>
       </div>
 
-      <div className="w-full mt-24 relative overflow-hidden" 
->
-      <Marquee speed={40} gradient={false} direction="left">
-        {reviews.map((data) => (
-          <div
-            key={data.id}
-            className="max-w-lg mb-24 p-6 ml-20 flex flex-col gap-3 bg-white rounded-lg shadow-2xl"
-          >
-            <div className="text-amber-500 flex flex-col">
-              <Rating
-                name="read-only"
-                value={data.value}
-                readOnly
-                className="flex"
-              />
+      <div className="w-full mt-24 relative overflow-hidden">
+        <Marquee
+          speed={40}
+          gradient={false}
+          direction="left"
+          pauseOnHover={true}
+          pauseOnClick={true}>
+          {reviews.map((data, index) => (
+            <div
+              key={data.id}
+              className="max-w-lg mb-24 p-6 ml-20 flex flex-col gap-3 bg-white rounded-lg shadow-2xl"
+              onMouseLeave={toggle}>
+              <div className="text-amber-500 flex flex-col">
+                <Rating
+                  name="read-only"
+                  value={data.value}
+                  readOnly
+                  className="flex"
+                />
+              </div>
+              <div>
+                <p className="font-normal text-gray-700 dark:text-gray-400">
+                  {data.text.length > 100
+                    ? showMoreStates[index]
+                      ? data.text
+                      : data.text.slice(0, 100) + "..."
+                    : data.text}
+                  {data.text.length > 100 && (
+                    <span
+                      className="text-blue-500 cursor-pointer"
+                      onClick={() => toggleShowMore(index)}>
+                      {showMoreStates[index] ? " Show Less" : " Show More"}
+                    </span>
+                  )}
+                </p>
+              </div>
+              <div className="flex flex-col">
+                <h6 className="text-[#3CAEAE] text-xl font-semibold">
+                  {data.name}
+                </h6>
+                <h1 className="text-[#90A3B4] text-sm">{data.position}</h1>
+              </div>
             </div>
-            <div>
-              <p className="font-normal text-gray-700 dark:text-gray-400">
-                {data.text.length > 100 ? (showMore ? data.text : data.text.slice(0, 100) + "...") : data.text}
-                {data.text.length > 100 && (
-                  <span
-                    className="text-blue-500 cursor-pointer"
-                    onClick={toggleShowMore}
-                  >
-                    {showMore ? " Show Less" : " Show More"}
-                  </span>
-                )}
-              </p>
-            </div>
-            <div className="flex flex-col">
-              <h6 className="text-[#3CAEAE] text-xl font-semibold">
-                {data.name}
-              </h6>
-              <h1 className="text-[#90A3B4] text-sm">{data.position}</h1>
-            </div>
-          </div>
-        ))}
-      </Marquee>
-    </div>
+          ))}
+        </Marquee>
+      </div>
     </div>
   );
 };
