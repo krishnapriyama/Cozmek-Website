@@ -52,8 +52,7 @@ const YourComponent = () => {
       effect={"cards"}
       grabCursor={true}
       modules={[EffectCards]}
-      className=" xs:w-[22.5rem]  xs:h-[37.5rem] xl:w-[30.5rem]  xl:h-[32.5rem] h-auto w-auto"
-    >
+      className=" xs:w-[22.5rem]  xs:h-[37.5rem] xl:w-[30.5rem]  xl:h-[32.5rem] h-auto w-auto">
       {card.map((Card, index) => {
         return (
           <SwiperSlide
