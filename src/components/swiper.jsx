@@ -1,11 +1,17 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCards } from "swiper/modules";
 import Slide from "../components/slide";
+import BasicCardimg from "/src/assets/BasicCardimg.png";
+import basiccard from "/src/assets/basic card.png";
+import InterMediateCardimg from "/src/assets/InterMediateCardimg.png";
+import Intermediatecard from "/src/assets/Intermediate card.png";
+import AdvanceCardImg from "/src/assets/AdvanceCardImg.jpeg";
+import advancedcard from "/src/assets/advanced card.png";
 
 let card = [
   {
-    mainImage: "/src/assets/BasicCardimg.png",
-    roundImages: "/src/assets/basic card.png",
+    mainImage: BasicCardimg,
+    roundImages: basiccard,
     Project: "2",
     type: "Basic",
     MainHead: "AI Crash Course Program (6 Months)",
@@ -15,8 +21,8 @@ let card = [
     OriginalAmount: "25,000",
   },
   {
-    mainImage: "/src/assets/InterMediateCardimg.png",
-    roundImages: "/src/assets/Intermediate card.png",
+    mainImage: InterMediateCardimg,
+    roundImages: Intermediatecard,
     Project: "4",
     type: "Intermediate",
     MainHead: "AI Expert Course Program (1 Year)",
@@ -26,8 +32,8 @@ let card = [
     OriginalAmount: "45,000",
   },
   {
-    mainImage: "/src/assets/AdvanceCardImg.jpeg",
-    roundImages: "/src/assets/advanced card.png",
+    mainImage: AdvanceCardImg,
+    roundImages: advancedcard,
     Project: "8",
     type: "Advanced",
     MainHead: "AI Job Guarantee Program with Internship (1 Year)",
@@ -47,15 +53,14 @@ const YourComponent = () => {
       grabCursor={true}
       modules={[EffectCards]}
       className=" xs:w-[22.5rem]  xs:h-[37.5rem] xl:w-[30.5rem]  xl:h-[32.5rem] h-auto w-auto"
-      
-      >
+    >
       {card.map((Card, index) => {
         return (
           <SwiperSlide
             key={index}
             className="p-0 m-0 h-fit"
             // "p-0 m-0 w-[22.5rem] h- lg:min-h-[30.5rem] xl:min-h-[32.5rem]"
-            >
+          >
             <Slide card={Card} />
           </SwiperSlide>
         );
