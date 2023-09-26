@@ -48,10 +48,12 @@ const Testimonials = () => {
     const updatedShowMoreStates = [...showMoreStates];
     updatedShowMoreStates[index] = !updatedShowMoreStates[index];
     setShowMoreStates(updatedShowMoreStates);
+
   };
 
   const toggle = () => {
     setShowMoreStates(reviews.map(() => false));
+
   };
 
   return (
@@ -73,12 +75,16 @@ const Testimonials = () => {
           gradient={false}
           direction="left"
           pauseOnHover={true}
+
           pauseOnClick={true}>
+
           {reviews.map((data, index) => (
             <div
               key={data.id}
               className="max-w-lg mb-24 p-6 ml-20 flex flex-col gap-3 bg-white rounded-lg shadow-2xl"
+
               onMouseLeave={toggle}>
+
               <div className="text-amber-500 flex flex-col">
                 <Rating
                   name="read-only"
@@ -97,7 +103,9 @@ const Testimonials = () => {
                   {data.text.length > 100 && (
                     <span
                       className="text-blue-500 cursor-pointer"
+
                       onClick={() => toggleShowMore(index)}>
+
                       {showMoreStates[index] ? " Show Less" : " Show More"}
                     </span>
                   )}
