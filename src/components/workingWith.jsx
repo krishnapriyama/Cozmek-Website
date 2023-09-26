@@ -116,8 +116,8 @@ const WorkingWith = () => {
         >
           {logo.map((img, i) => {
             return (
-              <SwiperSlide key={i} className="w-25% md:w-100%">
-                <img className="w-44 h-20" src={img} alt="Logo" />{" "}
+              <SwiperSlide key={i} className="w-25% md:w-100% flex justify-center">
+                <img className="w-20 h-10 sm:w-32 sm:h-20 ml-10 md:w-44" src={img} alt="Logo" />{" "}
               </SwiperSlide>
             );
           })}
