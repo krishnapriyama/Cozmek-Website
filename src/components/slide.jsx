@@ -41,10 +41,10 @@ const slide = ({ card }) => {
         </p>
         <div className="flex items-center justify-between pt-2">
           <div className="flex gap-3 font-extrabold">
-            <h2 className="text-green-500 text-[11px] xs:text-2xl">
+            <h2 className="text-green-500 text-[11px] text-sm xs:text-2xl">
               ₹ {card?.DiscountAmount}
             </h2>
-            <h2 className="line-through text-red-500 text-[10px] xs:text-xl">
+            <h2 className="line-through text-red-500 text-[9px] xs:text-xl">
               ₹ {card?.OriginalAmount}
             </h2>
           </div>
