@@ -93,7 +93,7 @@ const WorkingWith = () => {
                 alt="Prev"
               />
             </button>
-            <button className="   " onClick={handleNext}>
+            <button onClick={handleNext}>
               <img
                 className="w-8 bg-[#237E7E] hover:bg-[#a4dfdf] md:w-auto rounded-full"
                 src={RightArrow}
@@ -110,17 +110,14 @@ const WorkingWith = () => {
           slidesPerView={slidesPerView}
           autoplay={{ delay: 300 }}
           ref={swiperRef}
-          // navigation
           className="w-100% p-4"
-          // pagination={{ clickable: true }}
-          // scrollbar={{ draggable: true }}
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log("slide change")}
         >
           {logo.map((img, i) => {
             return (
               <SwiperSlide key={i} className="w-25% md:w-100%">
-                <img className="" src={img} alt="Logo" />{" "}
+                <img className="w-44 h-20" src={img} alt="Logo" />{" "}
               </SwiperSlide>
             );
           })}
