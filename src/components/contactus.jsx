@@ -138,130 +138,134 @@ const Contactus = () => {
                     </p>
                   </div>
 
-              <form id="gform">
-                <div className="mb-4">
-                  <label className="text-black">E-MAIL</label>
-                  <input
-                    className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
-                      errors.Email && "border-red-500"
-                    }`}
-                    id="username"
-                    type="email"
-                    name="Email"
-                    placeholder="alex_manager@gmail.com"
-                    value={formdata?.Email}
-                    onChange={(e) => {
-                      const { value, name } = e.target;
-                      setFormData((prevState) => ({
-                        ...prevState,
-                        [name]: value,
-                      }));
-                    }}
-                  />
-                  {errors.Email && (
-                    <p className="text-red-500 text-xs mt-1">{errors.Email}</p>
-                  )}
-                </div>
-                <div className="mb-4">
-                  <label className="text-black">FULL NAME</label>
-                  <input
-                    className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
-                      errors.FullName && "border-red-500"
-                    }`}
-                    id="username"
-                    type="text"
-                    name="FullName"
-                    placeholder="John Doe"
-                    value={formdata?.FullName}
-                    onChange={(e) => {
-                      const { value, name } = e.target;
-                      setFormData((prevState) => ({
-                        ...prevState,
-                        [name]: value,
-                      }));
-                    }}
-                  />
-                  {errors.FullName && (
-                    <p className="text-red-500 text-xs mt-1">
-                      {errors.FullName}
-                    </p>
-                  )}
-                </div>
-                <div className="mb-4">
-                  <label className="text-black">COURSE</label>
-                  <select
-                    className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
-                      errors.Coures && "border-red-500"
-                    }`}
-                    id="course"
-                    name="Coures"
-                    onChange={(e) => {
-                      const { value, name } = e.target;
-                      setFormData((prevState) => ({
-                        ...prevState,
-                        [name]: value,
-                      }));
-                    }}
-                    value={formdata?.Coures}
-                  >
-                    <option value="">Select a course</option>
-                    <option value="AI Crash Course Programe (6-Months)">
-                      AI Crash Course Programe (6-Months)
-                    </option>
-                    <option value="AI Expert Course Programe (1-Year)">
-                      AI Expert Course Programe (1-Year)
-                    </option>
-                    <option value="AI Job Guarantee Programe with Internship (1-Year)">
-                      AI Job Guarantee Programe with Internship (1-Year)
-                    </option>
-                  </select>
-                  {errors.Coures && (
-                    <p className="text-red-500 text-xs mt-1">{errors.Coures}</p>
-                  )}
-                </div>
-                <div className="mb-4">
-                  <label className="text-black">PHONE NUMBER</label>
-                  <input
-                    className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
-                      errors.PhoneNumber && "border-red-500"
-                    }`}
-                    id="username"
-                    type="number"
-                    placeholder="000 0000 0000"
-                    name="PhoneNumber"
-                    onChange={(e) => {
-                      const { value, name } = e.target;
-                      setFormData((prevState) => ({
-                        ...prevState,
-                        [name]: value,
-                      }));
-                    }}
-                    value={formdata?.PhoneNumber}
-                  />
-                  {errors.PhoneNumber && (
-                    <p className="text-red-500 text-xs mt-1">
-                      {errors.PhoneNumber}
-                    </p>
-                  )}
-                </div>
+                  <form id="gform">
+                    <div className="mb-4">
+                      <label className="text-black">E-MAIL</label>
+                      <input
+                        className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
+                          errors.Email && "border-red-500"
+                        }`}
+                        id="username"
+                        type="email"
+                        name="Email"
+                        placeholder="alex_manager@gmail.com"
+                        value={formdata?.Email}
+                        onChange={(e) => {
+                          const { value, name } = e.target;
+                          setFormData((prevState) => ({
+                            ...prevState,
+                            [name]: value,
+                          }));
+                        }}
+                      />
+                      {errors.Email && (
+                        <p className="text-red-500 text-xs mt-1">
+                          {errors.Email}
+                        </p>
+                      )}
+                    </div>
+                    <div className="mb-4">
+                      <label className="text-black">FULL NAME</label>
+                      <input
+                        className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
+                          errors.FullName && "border-red-500"
+                        }`}
+                        id="username"
+                        type="text"
+                        name="FullName"
+                        placeholder="John Doe"
+                        value={formdata?.FullName}
+                        onChange={(e) => {
+                          const { value, name } = e.target;
+                          setFormData((prevState) => ({
+                            ...prevState,
+                            [name]: value,
+                          }));
+                        }}
+                      />
+                      {errors.FullName && (
+                        <p className="text-red-500 text-xs mt-1">
+                          {errors.FullName}
+                        </p>
+                      )}
+                    </div>
+                    <div className="mb-4">
+                      <label className="text-black">COURSE</label>
+                      <select
+                        className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
+                          errors.Coures && "border-red-500"
+                        }`}
+                        id="course"
+                        name="Coures"
+                        onChange={(e) => {
+                          const { value, name } = e.target;
+                          setFormData((prevState) => ({
+                            ...prevState,
+                            [name]: value,
+                          }));
+                        }}
+                        value={formdata?.Coures}
+                      >
+                        <option value="">Select a course</option>
+                        <option value="AI Crash Course Programe (6-Months)">
+                          AI Crash Course Programe (6-Months)
+                        </option>
+                        <option value="AI Expert Course Programe (1-Year)">
+                          AI Expert Course Programe (1-Year)
+                        </option>
+                        <option value="AI Job Guarantee Programe with Internship (1-Year)">
+                          AI Job Guarantee Programe with Internship (1-Year)
+                        </option>
+                      </select>
+                      {errors.Coures && (
+                        <p className="text-red-500 text-xs mt-1">
+                          {errors.Coures}
+                        </p>
+                      )}
+                    </div>
+                    <div className="mb-4">
+                      <label className="text-black">PHONE NUMBER</label>
+                      <input
+                        className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
+                          errors.PhoneNumber && "border-red-500"
+                        }`}
+                        id="username"
+                        type="number"
+                        placeholder="000 0000 0000"
+                        name="PhoneNumber"
+                        onChange={(e) => {
+                          const { value, name } = e.target;
+                          setFormData((prevState) => ({
+                            ...prevState,
+                            [name]: value,
+                          }));
+                        }}
+                        value={formdata?.PhoneNumber}
+                      />
+                      {errors.PhoneNumber && (
+                        <p className="text-red-500 text-xs mt-1">
+                          {errors.PhoneNumber}
+                        </p>
+                      )}
+                    </div>
 
-                <div className="flex items-center justify-end mt-5">
-                  <button
-                    className="bg-[#0093B0] text-white font-bold py-2 px-6"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      submitHandler();
-                    }}
-                  >
-                    Submit
-                  </button>
+                    <div className="flex items-center justify-end mt-5">
+                      <button
+                        className="bg-[#0093B0] text-white font-bold py-2 px-6"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          submitHandler();
+                        }}
+                      >
+                        Submit
+                      </button>
+                    </div>
+                  </form>
                 </div>
-              </form>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      </div>
       </div>
     </div>
   );

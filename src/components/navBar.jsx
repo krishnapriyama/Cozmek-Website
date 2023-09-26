@@ -41,10 +41,14 @@ const NavBar = () => {
           </button>
         </div>
         <div className="text-[14px]">
-          <button className="uppercase" onClick={handleAboutClick}>About</button>
+          <button className="uppercase" onClick={handleAboutClick}>
+            About
+          </button>
         </div>
         <div className="text-[14px]">
-          <button className="uppercase" onClick={handleRegisterClick}>Register</button>
+          <button className="uppercase" onClick={handleRegisterClick}>
+            Register
+          </button>
         </div>
       </div>
       <div className="hidden md:block">

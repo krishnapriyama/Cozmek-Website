@@ -8,7 +8,7 @@ const HeroSection = () => {
       programeRef.scrollIntoView({ behavior: "smooth" });
     }
   };
-  
+
   return (
     <div className="h-auto md:flex custom-gradient font-medium text-[#192335CC] flex-row">
       {/* Left taglines */}

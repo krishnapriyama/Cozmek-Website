@@ -1,5 +1,5 @@
-import Whatyouwillget from "/src/assets/Whatyouwillget.png"
-import TickSqr from "/src/assets/Tick Square.png"
+import Whatyouwillget from "/src/assets/Whatyouwillget.png";
+import TickSqr from "/src/assets/Tick Square.png";
 let points = [
   "Online and Offline Sections",
   "Placement Assistance and Gurantee",
@@ -50,14 +50,14 @@ const whatyouwillget = () => {
                 }}
               >
                 <div>
-                <img
-                  src={TickSqr}
-                  className="inline pr-5"
-                  alt="Tick squire"
-                />
+                  <img
+                    src={TickSqr}
+                    className="inline pr-5"
+                    alt="Tick squire"
+                  />
                 </div>
                 <div>
-                <h4 className="text-base md:text-lg inline ">{point}</h4>
+                  <h4 className="text-base md:text-lg inline ">{point}</h4>
                 </div>
               </div>
             );

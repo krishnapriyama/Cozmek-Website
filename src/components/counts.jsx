@@ -26,7 +26,7 @@ const Counts = () => {
             </div>
             <div className="flex flex-col gap-2">
               <div className="text-2xl lg:text-4xl font-bold">
-                <CounterCards number={1800} title={'+'}/>
+                <CounterCards number={1800} title={"+"} />
               </div>
               <p className="text-[#6B7385] lg:text-2xl font-bold text-center">
                 Students
@@ -39,7 +39,7 @@ const Counts = () => {
             </div>
             <div className="flex flex-col gap-2">
               <div className="text-2xl lg:text-4xl font-bold">
-                <CounterCards number={5} title={'+'}/>
+                <CounterCards number={5} title={"+"} />
               </div>{" "}
               <p className="text-[#6B7385] lg:text-2xl font-bold text-center">
                 Addon Institutions
@@ -52,7 +52,7 @@ const Counts = () => {
             </div>
             <div className="flex flex-col gap-2">
               <div className="text-2xl lg:text-4xl font-bold">
-                <CounterCards number={30} title={'+'}/>
+                <CounterCards number={30} title={"+"} />
               </div>{" "}
               <p className="text-[#6B7385] lg:text-2xl font-bold">Workshops</p>
             </div>

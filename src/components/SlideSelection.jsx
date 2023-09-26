@@ -1,10 +1,10 @@
 import BasicCardimg from "/src/assets/BasicCardimg.png";
 import basiccard from "/src/assets/basic card.png";
-import InterMediateCardimg from "/src/assets/InterMediateCardimg.png"
-import Intermediatecard from "/src/assets/Intermediate card.png"
-import AdvanceCardImg from "/src/assets/AdvanceCardImg.jpeg"
-import advancecardround from "/src/assets/advanced card.png"
-import ticMark from "/src/assets/ticMark.png"
+import InterMediateCardimg from "/src/assets/InterMediateCardimg.png";
+import Intermediatecard from "/src/assets/Intermediate card.png";
+import AdvanceCardImg from "/src/assets/AdvanceCardImg.jpeg";
+import advancecardround from "/src/assets/advanced card.png";
+import ticMark from "/src/assets/ticMark.png";
 import { useRef } from "react";
 let slide = [
   {
@@ -73,134 +73,118 @@ const SlideSelection = () => {
   const programeRef = useRef();
   return (
     <div id="programe" ref={programeRef}>
-    <div className="flex-wrap w-auto h-auto px-3 py-4 gap-5 flex items-center justify-center md:mt-20 mt-10 my-5">
-      {slide.map((card, index) => {
-        return (
-          <div
-            key={index}
-            className=" max-w-[32rem] min-h-[720px]  container  bg-[#FAFAFA] rounded-xl overflow-hidden border-2  relative"
-            style={{
-              flexShrink: 0, // Prevent flex-shrinking
-            }}>
-            <div>
-              <img
-                className="w-[40rem] h-[11.8rem]"
-                src={card?.mainImage}
-                alt="CardImage"
-              />
-            </div>
+      <div className="flex-wrap w-auto h-auto px-3 py-4 gap-5 flex items-center justify-center md:mt-20 mt-10 my-5">
+        {slide.map((card, index) => {
+          return (
             <div
-              className="w-auto flex xs:w-[246.51px] items-center gap-5 absolute top-[11rem] left-8"
+              key={index}
+              className=" max-w-[32rem] min-h-[720px]  container  bg-[#FAFAFA] rounded-xl overflow-hidden border-2  relative"
               style={{
-                height: "41px",
-                paddingLeft: "10px",
-                paddingRight: "10px",
-                paddingTop: "5px",
-                paddingBottom: "5px",
-                background: "#FAFAFA",
-                borderRadius: "40px",
-                justifyContent: "flex-start",
-                alignItems: "center",
-              }}>
-              <img src={card?.roundImages} className="" alt="cards" />
-            </div>
-
-            <div className="p-4 pt-8 flex flex-col  ">
-              <h4 className="font-sans text-[#9393b6] pb-4">{card?.type}</h4>
-
-              <h1 className="text-2xl text-[#0B7077] font-sans font-bold ">
-                {card?.MainHead}
-              </h1>
-
-              <p className="text-sm font-sans text-[#7b7b96] py-2 leading-normal">
-                {card?.Discription}
-              </p>
-
-              <div className="">
-                <div className="flex items-center py-1">
-                  <img
-                    src={ticMark}
-                    className="w-6 mr-2 inline"
-                    alt="."
-                  />
-                  <h6 className="text-base">
-                    <span className="font-bold">Curriculum</span>:
-                    {card?.Curriculum}
-                  </h6>
-                </div>
-                <div className="flex items-center py-1">
-                  <img
-                    src={ticMark}
-                    className="w-6 mr-2 inline"
-                    alt="."
-                  />
-                  <h6 className="text-base">
-                    <span className="font-bold">Evaluation</span>:
-                    {card?.Evaluation}
-                  </h6>
-                </div>
-                <div className="flex items-center py-1">
-                  <img
-                    src={ticMark}
-                    className="w-6 mr-2 inline"
-                    alt="."
-                  />
-                  <h6 className="text-base">
-                    <span className="font-bold">Support</span>:{card?.Support}
-                  </h6>
-                </div>
-                <div className="flex items-center py-1">
-                  <img
-                    src={ticMark}
-                    className="w-6 mr-2 inline"
-                    alt="."
-                  />
-                  <h6 className="text-base">
-                    <span className="font-bold">Projects</span>:{card?.Projects}
-                  </h6>
-                </div>
-                <div className="flex items-center py-1">
-                  <img
-                    src={ticMark}
-                    className="w-6 mr-2 inline"
-                    alt="."
-                  />
-                  <h6 className="text-base">
-                    <span className="font-bold">Community Access</span>:
-                    {`card?.Community Access`}
-                  </h6>
-                </div>
-
-                <div className="flex items-center py-1">
-                  <img
-                    src={ticMark}
-                    className="w-6 mr-2 inline"
-                    alt="."
-                  />
-                  <h6 className="text-base">
-                    <span className="font-bold">Placement</span>:
-                    {card?.Placement}
-                  </h6>
-                </div>
+                flexShrink: 0, // Prevent flex-shrinking
+              }}
+            >
+              <div>
+                <img
+                  className="w-[40rem] h-[11.8rem]"
+                  src={card?.mainImage}
+                  alt="CardImage"
+                />
+              </div>
+              <div
+                className="w-auto flex xs:w-[246.51px] items-center gap-5 absolute top-[11rem] left-8"
+                style={{
+                  height: "41px",
+                  paddingLeft: "10px",
+                  paddingRight: "10px",
+                  paddingTop: "5px",
+                  paddingBottom: "5px",
+                  background: "#FAFAFA",
+                  borderRadius: "40px",
+                  justifyContent: "flex-start",
+                  alignItems: "center",
+                }}
+              >
+                <img src={card?.roundImages} className="" alt="cards" />
               </div>
 
-              <div className="flex items-center justify-between pt-5">
-                <div className="flex gap-3 font-extrabold">
+              <div className="p-4 pt-8 flex flex-col  ">
+                <h4 className="font-sans text-[#9393b6] pb-4">{card?.type}</h4>
 
-                  <h2 className="text-green-500 text-sm xs:text-2xl">₹ {card?.DiscountAmount}</h2>
-                  <h2 className="line-through text-red-500 text-xs xs:text-xl">₹ {card?.OriginalAmount}</h2>
+                <h1 className="text-2xl text-[#0B7077] font-sans font-bold ">
+                  {card?.MainHead}
+                </h1>
 
+                <p className="text-sm font-sans text-[#7b7b96] py-2 leading-normal">
+                  {card?.Discription}
+                </p>
+
+                <div className="">
+                  <div className="flex items-center py-1">
+                    <img src={ticMark} className="w-6 mr-2 inline" alt="." />
+                    <h6 className="text-base">
+                      <span className="font-bold">Curriculum</span>:
+                      {card?.Curriculum}
+                    </h6>
+                  </div>
+                  <div className="flex items-center py-1">
+                    <img src={ticMark} className="w-6 mr-2 inline" alt="." />
+                    <h6 className="text-base">
+                      <span className="font-bold">Evaluation</span>:
+                      {card?.Evaluation}
+                    </h6>
+                  </div>
+                  <div className="flex items-center py-1">
+                    <img src={ticMark} className="w-6 mr-2 inline" alt="." />
+                    <h6 className="text-base">
+                      <span className="font-bold">Support</span>:{card?.Support}
+                    </h6>
+                  </div>
+                  <div className="flex items-center py-1">
+                    <img src={ticMark} className="w-6 mr-2 inline" alt="." />
+                    <h6 className="text-base">
+                      <span className="font-bold">Projects</span>:
+                      {card?.Projects}
+                    </h6>
+                  </div>
+                  <div className="flex items-center py-1">
+                    <img src={ticMark} className="w-6 mr-2 inline" alt="." />
+                    <h6 className="text-base">
+                      <span className="font-bold">Community Access</span>:
+                      {`card?.Community Access`}
+                    </h6>
+                  </div>
+
+                  <div className="flex items-center py-1">
+                    <img src={ticMark} className="w-6 mr-2 inline" alt="." />
+                    <h6 className="text-base">
+                      <span className="font-bold">Placement</span>:
+                      {card?.Placement}
+                    </h6>
+                  </div>
                 </div>
 
-                <button className="bg-[#0B7077] hover:bg-[#329aa1] p-2 rounded-md text-white capitalize" onClick={handleRegisterClick}>
-                  enroll now
-                </button>
+                <div className="flex items-center justify-between pt-5">
+                  <div className="flex gap-3 font-extrabold">
+                    <h2 className="text-green-500 text-sm xs:text-2xl">
+                      ₹ {card?.DiscountAmount}
+                    </h2>
+                    <h2 className="line-through text-red-500 text-xs xs:text-xl">
+                      ₹ {card?.OriginalAmount}
+                    </h2>
+                  </div>
+
+                  <button
+                    className="bg-[#0B7077] hover:bg-[#329aa1] p-2 rounded-md text-white capitalize"
+                    onClick={handleRegisterClick}
+                  >
+                    enroll now
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-        );
-      })}
-    </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
