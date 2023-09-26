@@ -28,6 +28,7 @@ const slide = ({ card }) => {
           justifyContent: "flex-start",
           alignItems: "center",
         }}>
+
         <img src={card?.roundImages} className="" alt="cards" />
       </div>
 
@@ -41,16 +42,20 @@ const slide = ({ card }) => {
         </p>
         <div className="flex items-center justify-between pt-2">
           <div className="flex gap-3 font-extrabold">
+
             <h2 className="text-green-500 text-[11px] text-sm xs:text-2xl">
               ₹ {card?.DiscountAmount}
             </h2>
             <h2 className="line-through text-red-500 text-[9px] xs:text-xl">
+
               ₹ {card?.OriginalAmount}
             </h2>
           </div>
           <button
             className="bg-[#0B7077] hover:bg-[#329aa1] p-2 rounded-md text-white capitalize"
+
             onClick={handleRegisterClick}>
+
             enroll now
           </button>
         </div>

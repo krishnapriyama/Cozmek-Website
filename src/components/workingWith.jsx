@@ -117,7 +117,9 @@ const WorkingWith = () => {
             return (
               <SwiperSlide
                 key={i}
+
                 className="w-25% md:w-100% flex justify-center">
+
                 <img
                   className="w-20 h-10 sm:w-32 sm:h-20 ml-10 md:w-44"
                   src={img}
