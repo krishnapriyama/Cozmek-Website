@@ -1,8 +1,14 @@
-import { useState, useRef } from "react"; // Import React and other necessary modules
+import { useState, useRef } from "react"; 
 import Lottie from "react-lottie";
 import animationData from "../assets/contactus_animation.json";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const Contactus = () => {
+  const generateToast = (msg) => {
+    toast.success(msg, { position: "bottom-right" });
+  };
+
   const [formdata, setFormData] = useState({
     Email: "",
     FullName: "",
@@ -81,7 +87,7 @@ const Contactus = () => {
         }
       )
         .then(() => {
-          alert("Form Submitted Successfully");
+          generateToast("Registeration Completed");
         })
         .catch((err) => {
           alert(err);
@@ -261,6 +267,7 @@ const Contactus = () => {
                       </button>
                     </div>
                   </form>
+                  <ToastContainer/>
                 </div>
               </div>
             </div>
